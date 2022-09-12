@@ -1,0 +1,74 @@
+@use './abstracts/fontFace'
+@use './abstracts/BreakPoints' as *
+@use './abstracts/ColorScheme' as *
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    color: var(--palette-bodyBlack-600)
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    
+:root 
+    font-family: 'Work Sans', sans-serif, -apple-system, BlinkMacSystemFont
+    --global-animation: all .25s ease-in-out
+    // List out each tone color in palettes to root document
+    @each $colorname, $palette in $palettes 
+        @each $key, $value in $palette 
+            $keyname: "--palette-" + $colorname + "-" + $key
+            #{$keyname}: #{$value}
+
+h1
+    font-family: inherit
+    font-weight: 700
+    font-size: 80px
+    line-height: normal
+    text-shadow: 0px 0px 20px var(--palette-bodyBlack-100)
+    @include dynamicpoint($max: 850px)
+        font-size: 45px
+
+h2
+    font-family: inherit
+    font-weight: 600
+    font-size: 45px
+    line-height: normal
+    @include dynamicpoint($max: 850px)
+        font-size: 34px
+
+h2.insert
+    font-size: 30px
+    font-weight: 700
+    color: var(--palette-orange-600)
+
+p
+    font-family: 'Roboto Serif', serif
+    font-weight: 400
+    font-size: 16px
+    line-height: 160%
+
+ul li
+    list-style: none
+
+ul li a 
+    text-decoration: none
+    color: var(--palette-orange-400)
+    font-family: 'Roboto Serif', serif
+    font-weight: 400
+    font-size: 16px
+    line-height: 160%
+
+.accent
+    color: var(--palette-orange-600)
+
+
+::-webkit-scrollbar
+    height: 2.5px
+    width: 10px
+
+::-webkit-scrollbar-thumb
+    background: var(--palette-darkGreen-600)
+
+::-webkit-scrollbar-track
+    background: var(--palette-pasteWhite-600)
+    border-radius: 0px

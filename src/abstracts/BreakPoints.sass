@@ -1,0 +1,10 @@
+@mixin dynamicpoint($min: all, $max: all)
+    @if $min == all
+        @media (max-width: $max)
+            @content
+    @else if $max == all
+        @media (min-width: $min)
+            @content
+    @else
+        @media (min-width: $min) and (max-width: $max)
+            @content

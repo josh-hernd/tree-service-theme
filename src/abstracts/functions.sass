@@ -1,0 +1,14 @@
+@use './ColorScheme' as *
+
+@function colorPicker($color, $tone)
+    // @warn map-get($palette, $color)
+
+    @if map-has-key($palette, $color)
+        $color: map-get($palette, $color)
+        @if map-has-key($color, $tone)
+            $tone: map-get($color, $tone)
+            @return $tone
+        @warn "Unknown tone `#{$tone}` in color"
+        @return null
+    @warn "Unknown color `#{$color} in palette"
+    @return null
