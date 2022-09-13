@@ -153,6 +153,7 @@ interface Attributes {
 // Blurb
 type BlurbsArray = Array<{
     title: string,
+    desc?: string,
     img: {
         src: string,
         alt: string

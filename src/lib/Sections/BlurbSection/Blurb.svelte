@@ -5,12 +5,15 @@
 </script>
 
 <div class="blurbScroll">
-	{#each blurbs as { title, img }}
-		<div class="blurb">
+	{#each blurbs as { title, desc,img }}
+		<div class="blurb {desc ? 'adjust' : ''}">
 			<div class="icon">
 				<img src={img.src} alt={img.alt} />
 			</div>
 			<h2>{title}</h2>
+            {#if desc}
+               <p>{desc}</p>  
+            {/if} 
 		</div>
 	{/each}
 </div>
@@ -30,7 +33,7 @@ h2
 
 .blurb
     max-width: 300px
-    max-height: 335px
+    height: 335px
     padding: 100px 80px
     margin: auto 12.5px
     display: flex
@@ -44,6 +47,12 @@ h2
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2)
     scroll-snap-align: center
 
+.blurb.adjust
+    height: 400px
+    padding: 20px 40px
+    p
+        margin-top: 10px
+        text-align: justify
 .icon
     width: max-content
     img
