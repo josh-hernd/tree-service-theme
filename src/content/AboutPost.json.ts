@@ -1,4 +1,11 @@
-import type { CurrentPost, TwoCol } from "$lib/types/ComponentTypes";
+import type { CurrentPost, OnPage, TwoCol } from "$lib/types/ComponentTypes";
+
+const PostOnPage: OnPage = {
+    title: "About: Randy's Tree Service",
+    desc: "Randy's Tree Service is proud to provide the highest tree care in Maryland. Our team of tree care experts are consistently trained to look out for every single detail.",
+    keywords: 'tree removal companies, tree removal service near me, tree cutting service, tree cutting service near me, tree removal service, tree removal service near me, tree trimming service near me',
+    og_image: '/jpg/tree-service-solutions.jpeg'
+}
 
 const AboutExcerpt: CurrentPost = {
     parent: 'Home » About Us',
@@ -32,6 +39,7 @@ const AboutPost: TwoCol = {
 }
 
 export {
+    PostOnPage,
     AboutExcerpt,
     AboutPost
 }

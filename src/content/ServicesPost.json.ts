@@ -1,4 +1,11 @@
-import type { CurrentPost, ScrollableSection, ThreeColSection } from "$lib/types/ComponentTypes";
+import type { CurrentPost, OnPage, ScrollableSection, ThreeColSection } from "$lib/types/ComponentTypes";
+
+const PostOnPage: OnPage = {
+    title: 'Services: Tree Service Solutions',
+    desc: "Randy's Tree Service is proud to provide the highest tree care in Maryland. Our team of tree care experts are consistently trained to look out for every single detail.",
+    keywords: 'tree removal companies, tree removal service near me, tree cutting service, tree cutting service near me, tree removal service, tree removal service near me, tree trimming service near me',
+    og_image: '/jpg/tree-service-solutions.jpeg'
+}
 
 const ServiceExcerpt: CurrentPost = {
     parent: 'Home » Services',
@@ -66,6 +73,7 @@ const ServicePost: ScrollableSection = {
 }
 
 export {
+    PostOnPage,
     ServiceExcerpt,
     CredentialPost,
     ServicePost

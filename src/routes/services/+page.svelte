@@ -1,9 +1,12 @@
 <script lang="ts">
-	import { ServiceExcerpt, CredentialPost, ServicePost } from '$content/ServicesPost.json';
+	import { PostOnPage, ServiceExcerpt, CredentialPost, ServicePost } from '$content/ServicesPost.json';
+	import Head from '$lib/Header/head.svelte';
 	import CurrentPost from '$lib/PostHeader/CurrentPost.svelte';
 	import ScrollSection from '$lib/Sections/BlurbSection/ScrollSection.svelte';
 import ThreeSection from '$lib/Sections/ThreeSection.svelte';
 </script>
+
+<Head onPage={PostOnPage}/>
 
 <CurrentPost currentPost={ServiceExcerpt} />
 

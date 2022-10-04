@@ -1,6 +1,8 @@
 <script lang="ts">
+	import Head from '$lib/Header/head.svelte';
 	import Hero from '$lib/Full-header/Hero.svelte';
 	import {
+		PostOnPage,
 		AboutInsert,
 		HeroConst,
 		ServiceList,
@@ -12,6 +14,8 @@
 	import FullGallery from '$lib/Sections/GallerySection/FullGallery.svelte';
 	import SimpleSection from '$lib/Sections/SimpleSection.svelte';
 </script>
+
+<Head onPage={PostOnPage}/>
 
 <Hero heroConst={HeroConst} />
 
