@@ -110,6 +110,12 @@ interface FooterTypes {
     }
 }
 
+interface OnPage {
+    title?: string,
+    desc?: string,
+    keywords?: string,
+    og_image?: string
+}
 
 // Form Type
 const _number = 0;
@@ -211,6 +217,7 @@ type AlignButton = keyof {
 };
 
 export {
+    type OnPage,
     type NavElements,
     type HeroType,
     type AlignButton,

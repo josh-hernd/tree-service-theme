@@ -1,4 +1,11 @@
-import type { FullGallerySection, HeroType, ScrollableSection, SimpleSection, TwoCol } from "$lib/types/ComponentTypes";
+import type { FullGallerySection, HeroType, OnPage, ScrollableSection, SimpleSection, TwoCol } from "$lib/types/ComponentTypes";
+
+const PostOnPage: OnPage = {
+    title: 'Home: Tree Service Solutions',
+    desc: "Randy's Tree Service is proud to provide the highest tree care in Maryland. Our team of tree care experts are consistently trained to look out for every single detail.",
+    keywords: 'tree removal companies, tree removal service near me, tree cutting service, tree cutting service near me, tree removal service, tree removal service near me, tree trimming service near me',
+    og_image: '/jpg/tree-service-solutions.jpeg'
+}
 
 const HeroConst: HeroType = {
     subtitle: 'Hablamos Español',
@@ -94,23 +101,23 @@ const PostGallery: FullGallerySection = {
     title: 'We are fully equipped ready to serve you',
     gallery: [
         {
-            src: '/jpg/gallery/img-blob-0.jpeg',
+            src: '/jpg/gallery/img-blob-6.jpg',
             desc: 'Our Work'
         },
         {
-            src: '/jpg/gallery/img-blob-1.jpeg',
+            src: '/jpg/gallery/img-blob-7.jpg',
             desc: 'Our Work'
         },
         {
-            src: '/jpg/gallery/img-blob-2.jpeg',
+            src: '/jpg/gallery/img-blob-8.jpg',
             desc: 'Our Work'
         },
         {
-            src: '/jpg/gallery/img-blob-3.jpeg',
+            src: '/jpg/gallery/img-blob-9.jpg',
             desc: 'Our Work'
         },
         {
-            src: '/jpg/gallery/img-blob-4.jpeg',
+            src: '/jpg/gallery/img-blob-10.jpg',
             desc: 'Our Work'
         },
         {
@@ -131,6 +138,7 @@ const simpleSection: SimpleSection = {
 }
 
 export {
+    PostOnPage,
     HeroConst,
     AboutInsert,
     ServiceList,
